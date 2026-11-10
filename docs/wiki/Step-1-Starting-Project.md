@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-1-Starting-Project-da) · [Bahasa Malaysia](Step-1-Starting-Project-ms)
 
 # 1. The starting project
 

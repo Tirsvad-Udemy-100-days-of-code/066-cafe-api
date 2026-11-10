@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-2-Random-Cafe-da) · [Bahasa Malaysia](Step-2-Random-Cafe-ms)
 
 # 2. A random cafe
 

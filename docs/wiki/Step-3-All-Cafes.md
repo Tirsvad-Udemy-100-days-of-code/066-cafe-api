@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-3-All-Cafes-da) · [Bahasa Malaysia](Step-3-All-Cafes-ms)
 
 # 3. All the cafes
 

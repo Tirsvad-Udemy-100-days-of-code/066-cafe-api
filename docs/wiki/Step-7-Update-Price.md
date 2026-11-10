@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-7-Update-Price-da) · [Bahasa Malaysia](Step-7-Update-Price-ms)
 
 # 7. A cafe's coffee price
 

@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-4-Search-da) · [Bahasa Malaysia](Step-4-Search-ms)
 
 # 4. Find a cafe
 

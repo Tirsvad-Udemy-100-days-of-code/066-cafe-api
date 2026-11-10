@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-9-API-Documentation-da) · [Bahasa Malaysia](Step-9-API-Documentation-ms)
 
 # 9. Document the API
 

@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-6-Add-Cafe-da) · [Bahasa Malaysia](Step-6-Add-Cafe-ms)
 
 # 6. A new cafe
 
