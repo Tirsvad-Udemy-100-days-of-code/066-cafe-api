@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [f4f0ed2] |
 
 ---
 
@@ -56,3 +56,4 @@ Go-with-conditions — every checkable criterion passes; criterion 14 (check on 
 ---
 
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
+[f4f0ed2]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/f4f0ed21099b43bcfed12afed38be5478bbd347c
