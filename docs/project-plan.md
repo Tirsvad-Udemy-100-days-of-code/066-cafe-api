@@ -84,7 +84,7 @@ A No-Go at a gateway returns that gateway to S01 for rework; later gateways move
 
 [BC-001]: ./business-case.md
 [SA-001]: ./stakeholder-analysis.md
-[MIL-001]: ./milestones/mil-001.md
-[MIL-002]: ./milestones/mil-002.md
-[MIL-003]: ./milestones/mil-003.md
+[MIL-001]: ./milestones/mil-001-repository-foundation.md
+[MIL-002]: ./milestones/mil-002-english-lecture-documentation.md
+[MIL-003]: ./milestones/mil-003-danish-and-malay-wiki.md
 [55768bf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/55768bf1606cc189d8c6c00cacb762dc5fd04f55

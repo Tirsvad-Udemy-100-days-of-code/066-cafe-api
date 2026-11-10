@@ -1,0 +1,13 @@
+[project]
+name = "cafe-api-day-66"
+version = "0.1.0"
+description = "Udemy 100 Days of Code, Day 66: documentation of a Flask REST cafe API lecture."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { file = "LICENSE" }
+# No runtime dependencies: this repository documents the lecture and holds no application code.
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

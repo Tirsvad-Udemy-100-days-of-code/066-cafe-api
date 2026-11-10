@@ -1,0 +1,18 @@
+# Doxygen configuration for Day 66 cafe API.
+# Run from the repository root:  doxygen Doxyfile
+# Output goes to docs/doxygen/ (ignored by git).
+
+PROJECT_NAME           = "Cafe API (Day 66)"
+PROJECT_BRIEF          = "Udemy 100 Days of Code, Day 66: REST API with Flask"
+OUTPUT_DIRECTORY       = docs/doxygen
+INPUT                  = src README.md
+FILE_PATTERNS          = *.py *.md
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+OPTIMIZE_OUTPUT_JAVA   = YES
+JAVADOC_AUTOBRIEF      = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES
