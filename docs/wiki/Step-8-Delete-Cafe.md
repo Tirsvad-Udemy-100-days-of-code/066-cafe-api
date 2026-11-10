@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-8-Delete-Cafe-da) · [Bahasa Malaysia](Step-8-Delete-Cafe-ms)
 
 # 8. A cafe that is closed
 

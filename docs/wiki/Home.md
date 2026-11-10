@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Home-da) · [Bahasa Malaysia](Home-ms)
 
 # Day 66: Cafe API wiki
 
