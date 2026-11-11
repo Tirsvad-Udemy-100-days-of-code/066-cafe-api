@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | [e448215] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Objective 1 no longer names a description and topics, in line with the removed Success Criterion 4<br>Accepted on a Go review, RC-018; supervised, not independent | [c592dc1] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Objective 1 no longer names a description and topics, in line with the removed Success Criterion 4<br>Accepted on a Go review, RC-018; supervised, not independent | [c592dc1] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the remaining mentions of a repository description and topics (Business Opportunity, In Scope, Stakeholders)<br>Accepted on a Go review, RC-020; supervised, not independent | [f5e83b8] |
 
 ---
 
@@ -33,7 +33,7 @@ A course participant learns the Day 66 REST API concepts (REST, HTTP verbs, rout
 
 ## Business Opportunity
 
-A clear, illustrated walk-through of the lecture steps lets S01 consolidate the learning, lets S02 compare against a readable reference, and lets S03 find a well-described repository. A trilingual wiki widens the audience at low cost.
+A clear, illustrated walk-through of the lecture steps lets S01 consolidate the learning, lets S02 compare against a readable reference, and lets S03 find a well-documented repository. A trilingual wiki widens the audience at low cost.
 
 ## Objectives
 
@@ -49,7 +49,7 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 
 ### In Scope
 
-- Repository setup: description, topics, Python `.gitignore`, `pyproject.toml` (Python 3.13 or newer, pytest configuration, runtime dependencies Flask and Flask-SQLAlchemy from G4), `Doxyfile`, and the folders `docs/`, `src/` and `tests/` as the layout the project uses.
+- Repository setup: Python `.gitignore`, `pyproject.toml` (Python 3.13 or newer, pytest configuration, runtime dependencies Flask and Flask-SQLAlchemy from G4), `Doxyfile`, and the folders `docs/`, `src/` and `tests/` as the layout the project uses.
 - README from the framework template with the lecture steps, screenshots, venv instructions and run and test instructions.
 - Wiki pages in English, Danish and Bahasa Malaysia, one page per lecture step.
 - A screenshot for each lecture step in the README and the wiki.
@@ -136,7 +136,7 @@ A qualitative assessment is justified: the project is a personal learning record
 | --- | --- |
 | S01 | Owner, developer and reviewer; wants a record of the learning |
 | S02 | Reads the README, compares solutions and runs the instructions |
-| S03 | Browses the repository for ideas; needs description, topics and README |
+| S03 | Browses the repository for ideas; needs a README |
 
 ## Recommendation
 
@@ -145,5 +145,5 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 ---
 
 [SA-001]: ./stakeholder-analysis.md
-[e448215]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/e4482155dee6072a22e2314f5fdb4fcf29363556
 [c592dc1]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/c592dc1bf2b2a5244a646f5ac76a145f21c1eda5
+[f5e83b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/f5e83b8347928ef17b977474da1f9cce9785bda3
