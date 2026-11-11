@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Go/No-Go criterion 2 and the Objective 5 traceability row now follow Success Criterion 6 of BC-001 (Flask and Flask-SQLAlchemy since G4); Task 3 is unchanged because it is done and closed<br>Accepted on a Go review, RC-023; supervised, not independent | [1f27a84] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out KPI and API on first use; Task 1 changed only by that wording, it is done and closed<br>Accepted on a Go review, RC-025; supervised, not independent | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out KPI and API on first use; Task 1 changed only by that wording, it is done and closed<br>Accepted on a Go review, RC-025; supervised, not independent | [9086ee4] |
 
 ---
 
@@ -78,3 +78,4 @@ Criterion 1 (repository description and topics) was removed on 2026-11-11 at S01
 [BC-001]: ../business-case.md
 [SA-001]: ../stakeholder-analysis.md
 [1f27a84]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/1f27a846fd8270ced60b50e2632c0e547fd684e2
+[9086ee4]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/9086ee41f673e467b694c5dc168cf6de17d1d50e
