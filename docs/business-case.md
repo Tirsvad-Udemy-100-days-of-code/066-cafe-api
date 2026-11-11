@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Scope change: add the Flask cafe API (code) to the documentation project<br>New objectives 6 and 7, new Success Criteria 8 and 9<br>Runtime dependencies limited to Flask and Flask-SQLAlchemy<br>Accepted on a Go review, RC-009; supervised, not independent | [37f38a7] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | [e448215] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | [e448215] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Objective 1 no longer names a description and topics, in line with the removed Success Criterion 4<br>Accepted on a Go review, RC-018; supervised, not independent | [c592dc1] |
 
 ---
 
@@ -37,7 +37,7 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 
 ## Objectives
 
-1. Publish a repository with a description, topics, README and licence on the Tirsystem Gitea host.
+1. Publish a repository with a README and licence on the Tirsystem Gitea host.
 2. Document each Day 66 lecture step (starting project, random cafe, all cafes, search, Postman, add a cafe, update the price, delete a cafe, API documentation) in the README with one screenshot per step.
 3. Publish a wiki in English, Danish and Bahasa Malaysia with the same page set, each page explaining what was gained in that step.
 4. Document how to create and use a local `.venv` and run `python -m pip install --upgrade pip`, and how to run the project and its tests.
@@ -145,5 +145,5 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 ---
 
 [SA-001]: ./stakeholder-analysis.md
-[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
 [e448215]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/e4482155dee6072a22e2314f5fdb4fcf29363556
+[c592dc1]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/c592dc1bf2b2a5244a646f5ac76a145f21c1eda5
