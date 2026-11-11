@@ -9,8 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [37f38a7] |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Corrected the opengrep evidence after the CI run of the pull request; code fixed | [61dfa48] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Closed the action item on lock file or exact pins (done in PR #52) | pending |
 
 ---
 
@@ -54,12 +54,11 @@ Go — every Mandatory criterion passes or is N-A with a reason (7, 10). The Opt
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| Decide whether to add a lock file or exact pins (optional criterion 13) | S01 | 2026-11-16 |
+| Decide whether to add a lock file or exact pins (optional criterion 13). Done 2026-11-11: decided exact pins in `pyproject.toml` (PR #52: Flask 3.1.3, Flask-SQLAlchemy 3.1.1, pytest 9.2.0, ruff 0.17.4, mypy 2.4.1), no lock file; transitive dependencies stay unpinned | S01 | 2026-11-16 |
 | Review the code yourself before the merge; this review is not independent | S01 | 2026-11-13 |
 
 ---
 
 [MIL-004]: ../../milestones/mil-004-read-api.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
-[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
 [61dfa48]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/61dfa488379cfb58b761434b8dca3b324d771d53

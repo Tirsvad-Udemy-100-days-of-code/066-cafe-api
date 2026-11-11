@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [a0008b8] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Closed the action item on lock file or exact pins (done in PR #52) | pending |
 
 ---
 
@@ -55,7 +56,7 @@ Go — every Mandatory criterion passes or is N-A with a reason (7, 10); the Opt
 | --- | --- | --- |
 | Review the code yourself before the merge; this review is not independent | S01 | 2026-11-15 |
 | Confirm the OpenGrep check of the G5 pull request has no ERROR finding | S01 | 2026-11-16 |
-| Decide whether to add a lock file or exact pins (optional criterion 13) | S01 | 2026-11-16 |
+| Decide whether to add a lock file or exact pins (optional criterion 13). Done 2026-11-11: decided exact pins in `pyproject.toml` (PR #52: Flask 3.1.3, Flask-SQLAlchemy 3.1.1, pytest 9.2.0, ruff 0.17.4, mypy 2.4.1), no lock file; transitive dependencies stay unpinned | S01 | 2026-11-16 |
 
 ---
 
