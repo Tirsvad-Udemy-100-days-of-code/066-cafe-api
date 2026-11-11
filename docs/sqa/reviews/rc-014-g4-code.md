@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [37f38a7] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Corrected the opengrep evidence after the CI run of the pull request; code fixed | pending |
 
 ---
 
@@ -47,7 +48,7 @@
 
 ## Overall Verdict
 
-Go — every Mandatory criterion passes or is N-A with a reason (7, 10). The Optional criterion 13 fails (no exact pins) and does not block. Verified here, not only reported: `pytest` 23 passed, `ruff`, `mypy --strict`, a live run of `python -m cafe_api` with `curl` on `/random`, `/all`, `/search` (200, 404, 400). opengrep (`--no-git-ignore`, so the untracked files were scanned) reports one WARNING and no High or Critical: a Django SQL rule matched `search_cafes.execute(location)` in the controller; it is a false positive, because `execute` is our use case and the query goes through SQLAlchemy's parameterised `where`. Go/No-Go criteria 1 to 8 of MIL-004 are met.
+Go — every Mandatory criterion passes or is N-A with a reason (7, 10). The Optional criterion 13 fails (no exact pins) and does not block. Verified here, not only reported: `pytest` 23 passed, `ruff`, `mypy --strict`, a live run of `python -m cafe_api` with `curl` on `/random`, `/all`, `/search` (200, 404, 400). opengrep: my local scan (`--config auto --no-git-ignore`) showed one WARNING and no ERROR, but the OpenGrep check of the pull request (CI, a stricter rule set) reported 5 blocking ERROR findings of the rule `useless-inner-function`: the route and error handlers declared with decorators inside the factory functions in `cafe_controller.py` and `error_handlers.py`. Fixed in a follow-up commit by making the read controller a class (`CafeReadController`, routes added with `add_url_rule`) and the error handlers module-level functions registered with `register_error_handler`; no function is now defined inside another function. CI still reports the WARNING `sql-injection-db-cursor-execute`, a false positive: `execute` is our use case and the query goes through SQLAlchemy's parameterised `where`; it is not blocking. The first version of this record said opengrep was clean because the local rule set differed from CI's; CI is the reference. Go/No-Go criteria 1 to 8 of MIL-004 are met.
 
 ## Action Items
 

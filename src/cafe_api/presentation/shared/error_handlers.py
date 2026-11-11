@@ -12,6 +12,16 @@ def _json_error(error: Exception, status: HTTPStatus) -> tuple[Response, int]:
     return jsonify(error_body(str(error))), status.value
 
 
+def handle_not_found(error: CafeNotFoundError) -> tuple[Response, int]:
+    """Answer 404 with the error message as JSON."""
+    return _json_error(error, HTTPStatus.NOT_FOUND)
+
+
+def handle_invalid_search(error: InvalidSearchError) -> tuple[Response, int]:
+    """Answer 400 with the error message as JSON."""
+    return _json_error(error, HTTPStatus.BAD_REQUEST)
+
+
 def register_error_handlers(app: Flask) -> None:
     """Register the JSON error handlers on the app.
 
@@ -19,11 +29,5 @@ def register_error_handlers(app: Flask) -> None:
 
     @param app The Flask app to extend.
     """
-
-    @app.errorhandler(CafeNotFoundError)
-    def handle_not_found(error: CafeNotFoundError) -> tuple[Response, int]:
-        return _json_error(error, HTTPStatus.NOT_FOUND)
-
-    @app.errorhandler(InvalidSearchError)
-    def handle_invalid_search(error: InvalidSearchError) -> tuple[Response, int]:
-        return _json_error(error, HTTPStatus.BAD_REQUEST)
+    app.register_error_handler(CafeNotFoundError, handle_not_found)
+    app.register_error_handler(InvalidSearchError, handle_invalid_search)
