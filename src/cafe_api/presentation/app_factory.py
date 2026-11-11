@@ -3,9 +3,13 @@
 from flask import Flask
 
 from cafe_api import constants
+from cafe_api.application.use_cases.add_cafe import AddCafe
+from cafe_api.application.use_cases.delete_cafe import DeleteCafe
 from cafe_api.application.use_cases.get_all_cafes import GetAllCafes
 from cafe_api.application.use_cases.get_random_cafe import GetRandomCafe
 from cafe_api.application.use_cases.search_cafes import SearchCafes
+from cafe_api.application.use_cases.update_coffee_price import UpdateCoffeePrice
+from cafe_api.infrastructure.config.api_key_verifier import EnvApiKeyVerifier
 from cafe_api.infrastructure.config.settings import resolve_database_uri
 from cafe_api.infrastructure.persistence.database import db
 from cafe_api.infrastructure.persistence.seed import seed_if_empty
@@ -13,6 +17,9 @@ from cafe_api.infrastructure.repositories.sqlalchemy_cafe_repository import (
     SqlAlchemyCafeRepository,
 )
 from cafe_api.presentation.controllers.cafe_controller import create_cafe_blueprint
+from cafe_api.presentation.controllers.cafe_write_controller import (
+    create_cafe_write_blueprint,
+)
 from cafe_api.presentation.shared.error_handlers import register_error_handlers
 
 
@@ -36,6 +43,13 @@ def create_app(database_uri: str | None = None, seed: bool = True) -> Flask:
             GetRandomCafe(repository),
             GetAllCafes(repository),
             SearchCafes(repository),
+        )
+    )
+    app.register_blueprint(
+        create_cafe_write_blueprint(
+            AddCafe(repository),
+            UpdateCoffeePrice(repository),
+            DeleteCafe(repository, EnvApiKeyVerifier()),
         )
     )
     register_error_handlers(app)
