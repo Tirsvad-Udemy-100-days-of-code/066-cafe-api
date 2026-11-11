@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-004; autonomous, not independent | [55768bf] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Go/No-Go criterion 1 (repository description and topics) and the matching wording in Purpose, Deliverable and Traceability; Task 1 is unchanged because it is done and closed<br>Accepted on a Go review, RC-019; supervised, not independent | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Go/No-Go criterion 1 (repository description and topics) and the matching wording in Purpose, Deliverable and Traceability; Task 1 is unchanged because it is done and closed<br>Accepted on a Go review, RC-019; supervised, not independent | [c592dc1] |
 
 ---
 
@@ -78,3 +78,4 @@ Criterion 1 (repository description and topics) was removed on 2026-11-11 at S01
 [BC-001]: ../business-case.md
 [SA-001]: ../stakeholder-analysis.md
 [55768bf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/55768bf1606cc189d8c6c00cacb762dc5fd04f55
+[c592dc1]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/c592dc1bf2b2a5244a646f5ac76a145f21c1eda5

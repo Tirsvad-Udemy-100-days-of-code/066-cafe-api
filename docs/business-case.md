@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | [e448215] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Objective 1 no longer names a description and topics, in line with the removed Success Criterion 4<br>Accepted on a Go review, RC-018; supervised, not independent | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Objective 1 no longer names a description and topics, in line with the removed Success Criterion 4<br>Accepted on a Go review, RC-018; supervised, not independent | [c592dc1] |
 
 ---
 
@@ -146,3 +146,4 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 
 [SA-001]: ./stakeholder-analysis.md
 [e448215]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/e4482155dee6072a22e2314f5fdb4fcf29363556
+[c592dc1]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/c592dc1bf2b2a5244a646f5ac76a145f21c1eda5
