@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [a117b07] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | pending |
 
 ---
 
@@ -39,19 +40,19 @@
 | 11 | Every page starts with the language line, with the current language in bold and a link to the same page in each other language | Pass | Re-checked: only table header words changed; the language line of the changed pages is untouched |
 | 12 | A page in a language other than English is named `<Page>-<code>.md`, with a BCP 47 code; English has no suffix | Pass | Not affected by this change; see [RC-008] |
 | 13 | Code blocks, commands, file names and IDs stay in English in every language | Pass | Not affected by this change; see [RC-008] |
-| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pending | The corrected Danish text can be checked on the published wiki only after the merge; the publish workflow runs then |
+| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pass | Checked on the published wiki on 2026-11-11 after the merge of the change and the run of the publish workflow: the nine Danish pages `Home-da` and `Step-2` to `Step-9` (`-da`) return 200, contain "Metode" or "HTTP-metoder" and no "Verbum" or "HTTP-verber" |
 | 15 | A change to the layout rules (sections, order, naming) is made in the generator or template and in this checklist's source rules together | Pass | Not affected by this change; see [RC-008] |
 | 16 | The wiki folder (`docs/wiki/`) is flat: every page, `Home.md` and `_Sidebar.md` included, is directly in it, and languages are told apart by file name, never by a subfolder | Pass | Not affected by this change; see [RC-008] |
 
 ## Overall Verdict
 
-Go-with-conditions — every re-checked criterion passes except 14, which is Pending until the pages are published after the merge. Only wording changed: no page, link, code block or file name. The Danish text as a whole is still AI-written and not read by a native speaker.
+Go — every re-checked criterion passes; criterion 14 was confirmed on the published wiki after the merge. Only wording changed: no page, link, code block or file name. The Danish text as a whole is still AI-written and not read by a native speaker.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| After the merge, check the Danish pages on the published wiki and close criterion 14 | S01 | 2026-11-16 |
+| Read the Danish text and correct wording (this record covers only the method term) | S01 | 2026-11-16 |
 
 ---
 
