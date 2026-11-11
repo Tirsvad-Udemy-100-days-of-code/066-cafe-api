@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [a0008b8] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | pending |
 
 ---
 
@@ -39,19 +40,18 @@
 | 11 | Every page starts with the language line, with the current language in bold and a link to the same page in each other language | Pass | Re-checked: current language in bold, links to the other two, on all three Step 9 pages |
 | 12 | A page in a language other than English is named `<Page>-<code>.md`, with a BCP 47 code; English has no suffix | Pass | Not affected by this change; see [RC-008] |
 | 13 | Code blocks, commands, file names and IDs stay in English in every language | Pass | Re-checked: the `bash` block with the five `curl` commands is byte-identical in the three languages (same checksum); routes, header and field names stay English |
-| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pending | The new Step 9 text can be checked on the published wiki only after the merge; the publish workflow runs then |
+| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pass | Checked on the published wiki on 2026-11-11 after the merge of G5: `Step-9-API-Documentation`, `-da` and `-ms` return 200 and contain `X-API-Key` and the `curl -X DELETE` example; the English page also contains `CAFE_API_KEY` and the duplicate-name note |
 | 15 | A change to the layout rules (sections, order, naming) is made in the generator or template and in this checklist's source rules together | Pass | Not affected by this change; see [RC-008] |
 | 16 | The wiki folder (`docs/wiki/`) is flat: every page, `Home.md` and `_Sidebar.md` included, is directly in it, and languages are told apart by file name, never by a subfolder | Pass | Not affected by this change; see [RC-008] |
 
 ## Overall Verdict
 
-Go-with-conditions — every re-checked criterion passes except 14, which is Pending until the pages are published after the merge, so the MIL-005 criterion "the wiki still reviews Go" is open until then. The Danish and Bahasa Malaysia wording is AI-written and not read by a native speaker.
+Go — every re-checked criterion passes; criterion 14 was confirmed on the published wiki after the merge of G5, so the MIL-005 criterion "the wiki still reviews Go" is met. The Danish and Bahasa Malaysia wording is AI-written and not read by a native speaker.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| After the merge, check the three Step 9 pages on the published wiki and close criterion 14 | S01 | 2026-11-16 |
 | Read the new Danish section and correct wording; the Bahasa Malaysia section needs a native reader | S01 | 2026-11-16 |
 
 ---
