@@ -6,7 +6,7 @@
 
 *Illustration med eksempeldata, tegnet til dette repositorium ud fra lektionens beskrivelse. Det er ikke en optagelse af kursusprojektet.*
 
-| Verbum | Rute |
+| Metode | Rute |
 | --- | --- |
 | `POST` | `/add` |
 

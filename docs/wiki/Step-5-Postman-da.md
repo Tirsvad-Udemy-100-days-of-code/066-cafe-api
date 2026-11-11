@@ -14,7 +14,7 @@
 
 ## Hvad vi lærte
 
-- Et ordentligt værktøj til at teste alle HTTP-verber.
+- Et ordentligt værktøj til at teste alle HTTP-metoder.
 - Gemte, navngivne forespørgsler er råmaterialet til API-dokumentationen senere.
 
 ---

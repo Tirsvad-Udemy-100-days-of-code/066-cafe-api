@@ -12,9 +12,9 @@ Noter til dag 66 af Udemy-kurset 100 Days of Code: at bygge sit eget REST API me
 - **Forespørgsel og svar:** klienten sender en forespørgsel, serveren regner eller læser i en database og svarer med en ressource.
 - **API-design:** API'et er menukortet over hvad en klient kan bede om; REST giver menukortet en standardform.
 
-## HTTP-verber og CRUD
+## HTTP-metoder og CRUD
 
-| Verbum | CRUD | Bruges til |
+| Metode | CRUD | Bruges til |
 | --- | --- | --- |
 | GET | Læs | Hent en ressource |
 | POST | Opret | Tilføj en ny ressource |
