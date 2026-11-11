@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [a0008b8] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | [c051d04] |
 
 ---
 
@@ -60,3 +60,4 @@ Go — every re-checked criterion passes; criterion 14 was confirmed on the publ
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [RC-008]: ./rc-008-wiki-all-languages.md
 [a0008b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/a0008b8374b2b0f6c45664de70b15d1327ea894b
+[c051d04]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/c051d04d6f3692938c2411dd5c4ea31f98c58d61
