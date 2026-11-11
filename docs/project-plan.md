@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-003; autonomous, not independent | [55768bf] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Add gateways G4 (read API) and G5 (write API and API documentation) after the Business Case scope change<br>Accepted on a Go review, RC-011; supervised, not independent | [37f38a7] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Add gateways G4 (read API) and G5 (write API and API documentation) after the Business Case scope change<br>Accepted on a Go review, RC-011; supervised, not independent | [37f38a7] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the repository description and topics from the G1 deliverable and the Scope Coverage row<br>Accepted on a Go review, RC-021; supervised, not independent | pending |
 
 ---
 
@@ -33,7 +33,7 @@ This plan schedules five gateways inside the one-week constraint of [BC-001], fr
 
 | Gateway | Document | Window | Decision date | Owner | Stories | Main deliverable | Milestone |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| G1 Repository foundation | [MIL-001] | 2026-11-10 to 2026-11-12 | 2026-11-12 | S01 | none (technical tasks) | Repository metadata, project configuration, README skeleton, scan | not yet synced |
+| G1 Repository foundation | [MIL-001] | 2026-11-10 to 2026-11-12 | 2026-11-12 | S01 | none (technical tasks) | Project configuration, README skeleton, scan | not yet synced |
 | G2 English lecture documentation | [MIL-002] | 2026-11-12 to 2026-11-14 | 2026-11-14 | S01 | none (documentation tasks) | English wiki, README steps, screenshots | not yet synced |
 | G3 Danish and Bahasa Malaysia wiki | [MIL-003] | 2026-11-14 to 2026-11-16 | 2026-11-16 | S01 | none (documentation tasks) | Danish and Bahasa Malaysia wiki, language links | not yet synced |
 | G4 Flask app and read endpoints | [MIL-004] | 2026-11-11 to 2026-11-13 | 2026-11-13 | S01 | none (technical tasks) | Layered package, `Cafe` model, `GET /random`, `/all`, `/search`, tests | not yet synced |
@@ -59,7 +59,7 @@ Project starts 2026-11-10
 
 | Business Case scope item | Gateway |
 | --- | --- |
-| Repository setup (description, topics, .gitignore, pyproject.toml, Doxyfile, folders) | G1 |
+| Repository setup (.gitignore, pyproject.toml, Doxyfile, folders) | G1 |
 | README with lecture steps, screenshots, venv, run and test instructions | G1 (skeleton and instructions), G2 (steps and screenshots) |
 | Wiki in English | G2 |
 | Wiki in Danish and Bahasa Malaysia | G3 |
@@ -104,5 +104,4 @@ A No-Go at a gateway returns that gateway to S01 for rework; later gateways move
 [MIL-003]: ./milestones/mil-003-danish-and-malay-wiki.md
 [MIL-004]: ./milestones/mil-004-read-api.md
 [MIL-005]: ./milestones/mil-005-write-api.md
-[55768bf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/55768bf1606cc189d8c6c00cacb762dc5fd04f55
 [37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
