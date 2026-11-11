@@ -11,25 +11,25 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Objective 1 no longer names a description and topics, in line with the removed Success Criterion 4<br>Accepted on a Go review, RC-018; supervised, not independent | [c592dc1] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the remaining mentions of a repository description and topics (Business Opportunity, In Scope, Stakeholders)<br>Accepted on a Go review, RC-020; supervised, not independent | [f5e83b8] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the remaining mentions of a repository description and topics (Business Opportunity, In Scope, Stakeholders)<br>Accepted on a Go review, RC-020; supervised, not independent | [f5e83b8] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out the abbreviations on first use (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-024; supervised, not independent | pending |
 
 ---
 
 ## Executive Summary
 
-This project documents the learning outcome of Day 66 of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp", the lecture "Build Your Own REST API Service" (a Flask cafe API). The deliverables are a README and a trilingual wiki (English, Danish, Bahasa Malaysia) that walk through each lecture step with a screenshot and explain what was learned, and a working implementation of the lecture's cafe API in Python with Flask, with tests, so that the documented steps can be run. The repository is published on the Tirsystem Gitea host so that fellow course participants and GitHub viewers can read it.
+This project documents the learning outcome of Day 66 of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp", the lecture "Build Your Own REST API Service" (a Flask cafe application programming interface, API, in the Representational State Transfer, REST, style). The deliverables are a README and a trilingual wiki (English, Danish, Bahasa Malaysia) that walk through each lecture step with a screenshot and explain what was learned, and a working implementation of the lecture's cafe API in Python with Flask, with tests, so that the documented steps can be run. The repository is published on the Tirsystem Gitea host so that fellow course participants and GitHub viewers can read it.
 
 ## Methodological and Standards Foundation
 
-- Process: the SQA and QC framework mounted at `framework/` (plan first, review every artifact against its QC checklist, one pull request per milestone).
-- Quality model: ISO/IEC 25010:2023 characteristics tag every QC criterion.
+- Process: the software quality assurance (SQA) and quality control (QC) framework mounted at `framework/` (plan first, review every artifact against its QC checklist, one pull request per milestone).
+- Quality model: International Organization for Standardization and International Electrotechnical Commission (ISO/IEC) 25010:2023 characteristics tag every QC criterion.
 - Documentation: Markdown, reviewed against `QC-WIKI-001` for the wiki and checked with `framework/scripts/check-readme.sh` for the README.
 - Repository hygiene: a Python `.gitignore`, `pyproject.toml`, a Doxyfile and a static-analysis scan with opengrep before every push.
 
 ## Problem Statement
 
-A course participant learns the Day 66 REST API concepts (REST, HTTP verbs, routing, JSON serialisation, Postman, API keys, documentation) but keeps no structured record of them. Participants who want to compare solutions find scattered code and no explanation of the lecture steps in context, and none in Danish or Bahasa Malaysia.
+A course participant learns the Day 66 REST API concepts (REST, Hypertext Transfer Protocol (HTTP) verbs, routing, JavaScript Object Notation (JSON) serialisation, Postman, API keys, documentation) but keeps no structured record of them. Participants who want to compare solutions find scattered code and no explanation of the lecture steps in context, and none in Danish or Bahasa Malaysia.
 
 ## Business Opportunity
 
@@ -54,7 +54,7 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 - Wiki pages in English, Danish and Bahasa Malaysia, one page per lecture step.
 - A screenshot for each lecture step in the README and the wiki.
 - A local opengrep scan before each push; the AI prompt log under `docs/ai-prompts/`.
-- The Flask cafe API (gateways G4 and G5): a `Cafe` model on SQLite with example seed data, the endpoints `GET /random`, `GET /all`, `GET /search`, `POST /add`, `PATCH /update-price/<id>` and `DELETE /report-closed/<id>` (guarded by an API key read from the environment), `pytest` tests, and README instructions to run it.
+- The Flask cafe API (gateways G4 and G5): a `Cafe` model on SQLite (a file-based database that uses the Structured Query Language, SQL) with example seed data, the endpoints `GET /random`, `GET /all`, `GET /search`, `POST /add`, `PATCH /update-price/<id>` and `DELETE /report-closed/<id>` (guarded by an API key read from the environment), `pytest` tests, and README instructions to run it.
 - API documentation of the endpoints in the README and the wiki (lecture step 9), in the three wiki languages.
 
 ### Out of Scope
@@ -110,7 +110,7 @@ Criterion 4 (repository metadata) was removed on 2026-11-11 at S01's request. Th
 ## Assumptions
 
 - S01 is Product Owner, developer and reviewer; the AI acts as stand-in reviewer in autonomous mode.
-- The PO language is English and the PO domain is IT.
+- The Product Owner (PO) language is English and the PO domain is information technology (IT).
 - The Gitea repository exists and `.env` holds tokens for the personal use of S01.
 - Wiki pages are published by the `publish-wiki-pages.yml` workflow after merge.
 
@@ -145,5 +145,4 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 ---
 
 [SA-001]: ./stakeholder-analysis.md
-[c592dc1]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/c592dc1bf2b2a5244a646f5ac76a145f21c1eda5
 [f5e83b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/f5e83b8347928ef17b977474da1f9cce9785bda3
