@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Scope change: add the Flask cafe API (code) to the documentation project<br>New objectives 6 and 7, new Success Criteria 8 and 9<br>Runtime dependencies limited to Flask and Flask-SQLAlchemy<br>Accepted on a Go review, RC-009; supervised, not independent | [37f38a7] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | [e448215] |
 
 ---
 
@@ -146,3 +146,4 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 
 [SA-001]: ./stakeholder-analysis.md
 [37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
+[e448215]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/e4482155dee6072a22e2314f5fdb4fcf29363556
