@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [55768bf] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Scope change: add the Flask cafe API (code) to the documentation project<br>New objectives 6 and 7, new Success Criteria 8 and 9<br>Runtime dependencies limited to Flask and Flask-SQLAlchemy<br>Accepted on a Go review, RC-009; supervised, not independent | [37f38a7] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Scope change: add the Flask cafe API (code) to the documentation project<br>New objectives 6 and 7, new Success Criteria 8 and 9<br>Runtime dependencies limited to Flask and Flask-SQLAlchemy<br>Accepted on a Go review, RC-009; supervised, not independent | [37f38a7] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Success Criterion 4 (repository metadata) at S01's request; numbers kept<br>Accepted on a Go review, RC-017; supervised, not independent | [e448215] |
 
 ---
 
@@ -86,12 +86,13 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 | 1 | Lecture steps documented | 9 of 9 steps in the README and in each wiki language | Count of step sections |
 | 2 | Screenshots | 1 per lecture step in the README and the wiki | Count of images referenced |
 | 3 | Wiki languages | 3 (en, da, ms) with identical page sets | Page list comparison |
-| 4 | Repository metadata | Description set and at least 5 topics | Gitea API response |
 | 5 | Security scan | 0 findings of High or Critical severity | opengrep output before each push |
 | 6 | Runtime dependencies | 2 (Flask, Flask-SQLAlchemy), none other | `dependencies` list in `pyproject.toml` |
 | 7 | Reviews | 100 percent of artifacts have an `RC-*` verdict | Files in `docs/sqa/reviews/` |
 | 8 | Endpoints implemented | 6 of 6, each with a passing `pytest` test | `pytest` output |
 | 9 | Code review | `Go` against `qc-programming-python` for each code gateway | `RC-*` files |
+
+Criterion 4 (repository metadata) was removed on 2026-11-11 at S01's request. The other numbers are not changed, because other documents cite them.
 
 ## Risks
 
@@ -144,5 +145,5 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 ---
 
 [SA-001]: ./stakeholder-analysis.md
-[55768bf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/55768bf1606cc189d8c6c00cacb762dc5fd04f55
 [37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
+[e448215]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/e4482155dee6072a22e2314f5fdb4fcf29363556
