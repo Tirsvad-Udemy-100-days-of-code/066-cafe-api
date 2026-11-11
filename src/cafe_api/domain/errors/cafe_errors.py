@@ -11,3 +11,11 @@ class CafeNotFoundError(CafeError):
 
 class InvalidSearchError(CafeError):
     """Raised when a search request is not valid."""
+
+
+class InvalidCafeError(CafeError):
+    """Raised when the data of a cafe is not valid."""
+
+
+class AccessDeniedError(CafeError):
+    """Raised when a request lacks a valid API key."""

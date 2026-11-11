@@ -8,6 +8,7 @@ Notes and screenshots for Day 66 of Udemy's "100 Days of Code: The Complete Pyth
 
 - [Overview](#-overview)
 - [Lecture steps](#-lecture-steps)
+- [API](#-api)
 - [Requirements](#-requirements)
 - [Setup](#-setup)
 - [Run](#-run)
@@ -20,7 +21,7 @@ Notes and screenshots for Day 66 of Udemy's "100 Days of Code: The Complete Pyth
 
 The Day 66 lecture builds a REST API for a database of laptop-friendly cafes: a random cafe, all cafes, a search by location, adding a cafe, updating a coffee price, deleting a closed cafe, and publishing the API documentation with Postman.
 
-This repository documents what the lecture teaches and holds our own Flask implementation of the cafe API (written from the lecture description, not copied from the course). The read endpoints (`GET /random`, `GET /all`, `GET /search`) work now; the write endpoints (`POST /add`, `PATCH /update-price/<id>`, `DELETE /report-closed/<id>`) follow in the next gateway. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
+This repository documents what the lecture teaches and holds our own Flask implementation of the cafe API (written from the lecture description, not copied from the course). It serves the six endpoints of the lecture (see [API](#-api)). The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
 
 | Part | Purpose |
 | --- | --- |
@@ -87,6 +88,34 @@ Publish the Postman collection as API documentation. [Read more][wiki-9]
 
 ![Document the API](./docs/images/step-9.png)
 
+## 🔌 API
+
+This repository holds its own implementation of the API. Start it with `python -m cafe_api`; it listens on `http://127.0.0.1:5000`.
+
+| Verb | Route | What it does | Success | Errors |
+| --- | --- | --- | --- | --- |
+| `GET` | `/random` | One random cafe | 200 `{"cafe": {...}}` | 404 when there is no cafe |
+| `GET` | `/all` | Every cafe | 200 `{"cafes": [...]}` |  |
+| `GET` | `/search?loc=...` | The cafes at a location, ignoring case | 200 `{"cafes": [...]}` | 400 without `loc`, 404 when none match |
+| `POST` | `/add` | Create a cafe from a JSON body | 201 `{"cafe": {...}}` | 400 for a missing, blank or wrongly typed field, or a name that already exists |
+| `PATCH` | `/update-price/<cafe_id>?new_price=...` | Change the coffee price | 200 `{"cafe": {...}}` | 400 without `new_price`, 404 for an unknown id |
+| `DELETE` | `/report-closed/<cafe_id>` | Remove a closed cafe; needs the header `X-API-Key` | 200 `{"message": "..."}` | 403 for a wrong or missing key, 404 for an unknown id |
+
+- Every error is JSON: `{"error": "..."}`.
+- The API key is read from the environment variable `CAFE_API_KEY` when a request arrives. There is no default key: when the variable is not set, every delete answers 403.
+- The lecture sends the key as the query parameter `api-key`. Here it travels in the header `X-API-Key`, so the key does not end up in URLs and logs.
+- The `POST /add` body is a JSON object with the text fields `name`, `map_url`, `img_url`, `location`, `seats`, the true/false fields `has_toilet`, `has_wifi`, `has_sockets`, `can_take_calls`, and an optional `coffee_price`.
+
+Try them (on Windows PowerShell use `curl.exe`, or send the requests from Postman):
+
+```bash
+curl http://127.0.0.1:5000/random
+curl "http://127.0.0.1:5000/search?loc=Peckham"
+curl -X POST http://127.0.0.1:5000/add -H "Content-Type: application/json" -d '{"name": "Example Cafe", "map_url": "https://example.com/map", "img_url": "https://example.com/img.jpg", "location": "Peckham", "seats": "10-20", "has_toilet": true, "has_wifi": true, "has_sockets": false, "can_take_calls": false, "coffee_price": "2.80"}'
+curl -X PATCH "http://127.0.0.1:5000/update-price/1?new_price=3.20"
+curl -X DELETE http://127.0.0.1:5000/report-closed/1 -H "X-API-Key: <your-key>"
+```
+
 ## 📋 Requirements
 
 - Python 3.13 or newer (`python --version`), needed for the virtual environment, the API and `pytest`.
@@ -135,7 +164,13 @@ curl http://127.0.0.1:5000/all
 curl "http://127.0.0.1:5000/search?loc=Peckham"
 ```
 
-`/search` answers 404 with a JSON error when no cafe matches and 400 when `loc` is missing. To use another database, set `CAFE_API_DATABASE_URL` (a SQLAlchemy URL) before starting. To build the source documentation:
+To allow deleting, set the API key before starting (choose your own secret; there is no default and it is never stored in the repository):
+
+```bash
+export CAFE_API_KEY="choose-a-secret"
+```
+
+In Windows PowerShell: `$env:CAFE_API_KEY = "choose-a-secret"`. To use another database, set `CAFE_API_DATABASE_URL` (a SQLAlchemy URL) before starting. To build the source documentation:
 
 ```bash
 doxygen Doxyfile
