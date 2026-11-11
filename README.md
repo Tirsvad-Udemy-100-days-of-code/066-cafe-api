@@ -20,13 +20,13 @@ Notes and screenshots for Day 66 of Udemy's "100 Days of Code: The Complete Pyth
 
 The Day 66 lecture builds a REST API for a database of laptop-friendly cafes: a random cafe, all cafes, a search by location, adding a cafe, updating a coffee price, deleting a closed cafe, and publishing the API documentation with Postman.
 
-This repository documents what the lecture teaches. It holds **no application code**; the code belongs to the course. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
+This repository documents what the lecture teaches and holds our own Flask implementation of the cafe API (written from the lecture description, not copied from the course). The read endpoints (`GET /random`, `GET /all`, `GET /search`) work now; the write endpoints (`POST /add`, `PATCH /update-price/<id>`, `DELETE /report-closed/<id>`) follow in the next gateway. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
 
 | Part | Purpose |
 | --- | --- |
 | `docs/` | Project documents, the wiki source (`docs/wiki/`) and screenshots |
-| `src/` | Reserved for source code (empty) |
-| `tests/` | Reserved for `pytest` tests (empty) |
+| `src/cafe_api/` | The Flask cafe API, in layers: `domain`, `application`, `infrastructure`, `presentation` |
+| `tests/` | `pytest` tests: `unit`, `integration`, `e2e` |
 | `framework/` | The SQA and QC framework the project follows |
 
 ## 🎓 Lecture steps
@@ -89,11 +89,11 @@ Publish the Postman collection as API documentation. [Read more][wiki-9]
 
 ## 📋 Requirements
 
-- Python 3.13 or newer (`python --version`), needed for the virtual environment and `pytest`.
+- Python 3.13 or newer (`python --version`), needed for the virtual environment, the API and `pytest`.
 - `git`, to clone the repository.
 - Optional: [Doxygen][doxygen], to build the source documentation from the `Doxyfile`.
 
-There are no runtime dependencies.
+The API has two runtime dependencies, Flask and Flask-SQLAlchemy; the setup below installs them into the virtual environment.
 
 ## 🛠️ Setup
 
@@ -105,7 +105,7 @@ Windows (PowerShell):
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install pytest
+python -m pip install -e ".[dev]"
 ```
 
 macOS and Linux:
@@ -114,14 +114,28 @@ macOS and Linux:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install pytest
+python -m pip install -e ".[dev]"
 ```
 
 Leave the environment with `deactivate`. The `.venv` folder is ignored by git.
 
 ## ▶️ Run
 
-There is nothing to run: the repository documents the lecture. Read the [wiki][wiki] or the lecture steps in this README. To build the (currently empty) source documentation:
+Start the API (it creates `instance/cafes.db` and fills it with example cafes on the first start):
+
+```bash
+python -m cafe_api
+```
+
+The server listens on `http://127.0.0.1:5000`. Try the read endpoints:
+
+```bash
+curl http://127.0.0.1:5000/random
+curl http://127.0.0.1:5000/all
+curl "http://127.0.0.1:5000/search?loc=Peckham"
+```
+
+`/search` answers 404 with a JSON error when no cafe matches and 400 when `loc` is missing. To use another database, set `CAFE_API_DATABASE_URL` (a SQLAlchemy URL) before starting. To build the source documentation:
 
 ```bash
 doxygen Doxyfile
@@ -135,7 +149,7 @@ With the environment active:
 python -m pytest
 ```
 
-There is no code yet, so pytest reports "no tests ran" (exit code 5).
+The tests use their own temporary SQLite files and never read `.env`.
 
 ## 📄 License
 

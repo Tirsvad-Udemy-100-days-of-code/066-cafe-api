@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [55768bf] |
-| 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-002; autonomous, not independent | [55768bf] |
+| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-002; autonomous, not independent | [55768bf] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Follow the Business Case scope change: runnable API, two runtime dependencies, milestones MIL-004 and MIL-005<br>Accepted on a Go review, RC-010; supervised, not independent | [37f38a7] |
 
 ---
 
@@ -42,15 +42,16 @@ This analysis identifies who has influence over, or interest in, the Day 66 docu
 | CN-002 | S02 | README instructions to run the project and its tests work as written | Usability |
 | CN-003 | S02 | Material uses the assignment's names for routes and functions | Functionality |
 | CN-004 | S03 | The repository has a clear description, topics and README | Usability |
-| CN-005 | S03 | No runtime dependencies to install or trust | Supportability |
+| CN-005 | S03 | Only the two runtime dependencies Flask and Flask-SQLAlchemy, and no secret in the repository | Supportability |
 | CN-006 | S01 | The wiki exists in English, Danish and Bahasa Malaysia | Functionality |
+| CN-007 | S02 | The cafe API runs locally and its tests pass, using the assignment's route names | Functionality |
 
 ## Communication Requirements
 
 | ID | Channel | Frequency | Deliverable | Phase / Milestone |
 | --- | --- | --- | --- | --- |
-| CR-001 | Chat | Per milestone | Plan and review summary | MIL-001, MIL-002, MIL-003 |
-| CR-002 | Pull request | Per milestone | Reviewable change | MIL-001, MIL-002, MIL-003 |
+| CR-001 | Chat | Per milestone | Plan and review summary | MIL-001, MIL-002, MIL-003, MIL-004, MIL-005 |
+| CR-002 | Pull request | Per milestone | Reviewable change | MIL-001, MIL-002, MIL-003, MIL-004, MIL-005 |
 | CR-003 | README and wiki | On merge | Published documentation | MIL-002, MIL-003 |
 
 ## Conflicting Interests and Mitigations
@@ -58,7 +59,7 @@ This analysis identifies who has influence over, or interest in, the Day 66 docu
 | Conflict | Stakeholders | Mitigation |
 | --- | --- | --- |
 | S01 wants rich explanation, S03 wants a short README | S01, S03 | The README stays brief with step summaries and links; depth is in the wiki |
-| S02 wants runnable code, the scope has no code | S02, S01 | The README states plainly that the repository documents the lecture and holds no application code, and points to the course resources |
+| S02 wants runnable code, S03 wants nothing to install | S02, S03, S01 | The runtime dependencies are only Flask and Flask-SQLAlchemy, installed into a local `.venv`; the README says how |
 
 ## Traceability Analysis
 
@@ -72,6 +73,7 @@ This analysis identifies who has influence over, or interest in, the Day 66 docu
 | S02 | CN-003 | Objective 2 of [BC-001] |
 | S03 | CN-004 | Objective 1 of [BC-001] |
 | S03 | CN-005 | Objective 5 of [BC-001] |
+| S02 | CN-007 | Objectives 6 and 7 of [BC-001] |
 
 ## Sign-Off
 
@@ -81,3 +83,4 @@ Pending S01.
 
 [BC-001]: ./business-case.md
 [55768bf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/55768bf1606cc189d8c6c00cacb762dc5fd04f55
+[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90

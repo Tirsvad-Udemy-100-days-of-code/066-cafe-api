@@ -1,5 +1,11 @@
 # tests
 
-Reserved for the `pytest` tests of the code in `src/`. There is no code yet, so there are no tests.
+The `pytest` tests of the code in `src/`, in the folders of the clean architecture:
 
-Run `python -m pytest` from the repository root; with no tests it reports "no tests ran" (exit code 5).
+| Folder | Proves |
+| --- | --- |
+| `unit` | The use cases with a fake repository, and that `domain` and `application` import no framework |
+| `integration` | The SQLite repository against a real database file |
+| `e2e` | The HTTP endpoints through the Flask test client |
+
+Run `python -m pytest` from the repository root. The tests use temporary databases and never read `.env`.
