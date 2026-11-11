@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [37f38a7] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Corrected the opengrep evidence after the CI run of the pull request; code fixed | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Corrected the opengrep evidence after the CI run of the pull request; code fixed | [61dfa48] |
 
 ---
 
@@ -62,3 +62,4 @@ Go — every Mandatory criterion passes or is N-A with a reason (7, 10). The Opt
 [MIL-004]: ../../milestones/mil-004-read-api.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
 [37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
+[61dfa48]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/61dfa488379cfb58b761434b8dca3b324d771d53
