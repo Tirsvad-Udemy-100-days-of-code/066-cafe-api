@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-003; autonomous, not independent | [55768bf] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Add gateways G4 (read API) and G5 (write API and API documentation) after the Business Case scope change<br>Accepted on a Go review, RC-011; supervised, not independent | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Add gateways G4 (read API) and G5 (write API and API documentation) after the Business Case scope change<br>Accepted on a Go review, RC-011; supervised, not independent | [37f38a7] |
 
 ---
 
@@ -105,3 +105,4 @@ A No-Go at a gateway returns that gateway to S01 for rework; later gateways move
 [MIL-004]: ./milestones/mil-004-read-api.md
 [MIL-005]: ./milestones/mil-005-write-api.md
 [55768bf]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/55768bf1606cc189d8c6c00cacb762dc5fd04f55
+[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90

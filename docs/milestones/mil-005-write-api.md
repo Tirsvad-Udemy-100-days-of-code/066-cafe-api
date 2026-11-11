@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-013; supervised, not independent | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-013; supervised, not independent | [37f38a7] |
 
 ---
 
@@ -80,3 +80,4 @@ A pull request that adds `POST /add`, `PATCH /update-price/<id>` and `DELETE /re
 
 [BC-001]: ../business-case.md
 [SA-001]: ../stakeholder-analysis.md
+[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
