@@ -11,28 +11,29 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [55768bf] |
-| 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-004; autonomous, not independent | [55768bf] |
+| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-004; autonomous, not independent | [55768bf] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed Go/No-Go criterion 1 (repository description and topics) and the matching wording in Purpose, Deliverable and Traceability; Task 1 is unchanged because it is done and closed<br>Accepted on a Go review, RC-019; supervised, not independent | pending |
 
 ---
 
 ## Purpose
 
-Decide whether the repository is ready to receive lecture documentation: it is described and tagged on the git host, it has the Python project configuration, the ignore rules, the Doxygen configuration, a README skeleton with the environment instructions, and a repeatable security scan.
+Decide whether the repository is ready to receive lecture documentation: it has the Python project configuration, the ignore rules, the Doxygen configuration, a README skeleton with the environment instructions, and a repeatable security scan.
 
 ## Deliverable
 
-A pull request that adds `.gitignore`, `pyproject.toml`, `Doxyfile`, a README skeleton with venv, run and test instructions, the folders `src/` and `tests/`, and the project documents under `docs/`; plus the repository description and topics set on the git host.
+A pull request that adds `.gitignore`, `pyproject.toml`, `Doxyfile`, a README skeleton with venv, run and test instructions, the folders `src/` and `tests/`, and the project documents under `docs/`.
 
 ## Go / No-Go Criteria
 
 | # | Criterion (objectively checkable) | Go | No-Go |
 | --- | --- | --- | --- |
-| 1 | Repository description is set and at least 5 topics exist (Gitea API) | Both present | Either missing |
 | 2 | `pyproject.toml` requires Python 3.13 or newer and lists no runtime dependencies | True | Otherwise |
 | 3 | `.env` is ignored and absent from the index | `git ls-files .env` is empty | `.env` tracked |
 | 4 | README passes `framework/scripts/check-readme.sh` | Exit 0 | Non-zero |
 | 5 | opengrep reports no High or Critical finding | 0 findings | Any finding |
+
+Criterion 1 (repository description and topics) was removed on 2026-11-11 at S01's request. The other numbers are not changed, because review records cite them.
 
 ## Dependencies
 
@@ -44,7 +45,7 @@ A pull request that adds `.gitignore`, `pyproject.toml`, `Doxyfile`, a README sk
 
 | Business Case objective / KPI / user story | Reference |
 | --- | --- |
-| Objective 1: publish a described repository | [BC-001] |
+| Objective 1: publish a repository with a README and licence | [BC-001] |
 | Objective 4: venv, run and test instructions | [BC-001] |
 | Objective 5: no runtime dependencies, opengrep scan | [BC-001] |
 
