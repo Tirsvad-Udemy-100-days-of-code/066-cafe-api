@@ -16,7 +16,7 @@
 
 Dette repositorium har sin egen implementation af API'et. Start den med `python -m cafe_api`; den lytter på `http://127.0.0.1:5000`.
 
-| Verbum | Rute | Hvad den gør | Succes | Fejl |
+| Metode | Rute | Hvad den gør | Succes | Fejl |
 | --- | --- | --- | --- | --- |
 | `GET` | `/random` | Én tilfældig café | 200 `{"cafe": {...}}` | 404 hvis der ingen café er |
 | `GET` | `/all` | Alle caféer | 200 `{"cafes": [...]}` |  |
