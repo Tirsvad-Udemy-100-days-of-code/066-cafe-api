@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [a0008b8] |
 
 ---
 
@@ -62,3 +62,4 @@ Go — every Mandatory criterion passes or is N-A with a reason (7, 10); the Opt
 [MIL-005]: ../../milestones/mil-005-write-api.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
 [RC-014]: ./rc-014-g4-code.md
+[a0008b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/a0008b8374b2b0f6c45664de70b15d1327ea894b
