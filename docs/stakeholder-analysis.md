@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Follow the Business Case scope change: runnable API, two runtime dependencies, milestones MIL-004 and MIL-005<br>Accepted on a Go review, RC-010; supervised, not independent | [37f38a7] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Concern CN-004 (same ID) and the S03 rows no longer name a description and topics; the S03 dependency concern now says two runtime dependencies, as CN-005<br>Accepted on a Go review, RC-022; supervised, not independent | [f5e83b8] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Concern CN-004 (same ID) and the S03 rows no longer name a description and topics; the S03 dependency concern now says two runtime dependencies, as CN-005<br>Accepted on a Go review, RC-022; supervised, not independent | [f5e83b8] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out API on first use in the body (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-027; supervised, not independent | [9086ee4] |
 
 ---
 
@@ -44,7 +44,7 @@ This analysis identifies who has influence over, or interest in, the Day 66 docu
 | CN-004 | S03 | The repository has a clear README | Usability |
 | CN-005 | S03 | Only the two runtime dependencies Flask and Flask-SQLAlchemy, and no secret in the repository | Supportability |
 | CN-006 | S01 | The wiki exists in English, Danish and Bahasa Malaysia | Functionality |
-| CN-007 | S02 | The cafe API runs locally and its tests pass, using the assignment's route names | Functionality |
+| CN-007 | S02 | The cafe application programming interface (API) runs locally and its tests pass, using the assignment's route names | Functionality |
 
 ## Communication Requirements
 
@@ -82,5 +82,5 @@ Pending S01.
 ---
 
 [BC-001]: ./business-case.md
-[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
 [f5e83b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/f5e83b8347928ef17b977474da1f9cce9785bda3
+[9086ee4]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/9086ee41f673e467b694c5dc168cf6de17d1d50e

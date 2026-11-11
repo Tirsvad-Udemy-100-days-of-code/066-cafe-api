@@ -11,14 +11,14 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Add gateways G4 (read API) and G5 (write API and API documentation) after the Business Case scope change<br>Accepted on a Go review, RC-011; supervised, not independent | [37f38a7] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the repository description and topics from the G1 deliverable and the Scope Coverage row<br>Accepted on a Go review, RC-021; supervised, not independent | [f5e83b8] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the repository description and topics from the G1 deliverable and the Scope Coverage row<br>Accepted on a Go review, RC-021; supervised, not independent | [f5e83b8] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out API on first use in the body (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-026; supervised, not independent | [9086ee4] |
 
 ---
 
 ## Purpose
 
-This plan schedules five gateways inside the one-week constraint of [BC-001], from 2026-11-10 to 2026-11-17: G1 to G3 deliver the Day 66 README and trilingual wiki, G4 and G5 deliver the Flask cafe API.
+This plan schedules five gateways inside the one-week constraint of [BC-001], from 2026-11-10 to 2026-11-17: G1 to G3 deliver the Day 66 README and trilingual wiki, G4 and G5 deliver the Flask cafe application programming interface (API).
 
 ## Planning Assumptions
 
@@ -104,5 +104,5 @@ A No-Go at a gateway returns that gateway to S01 for rework; later gateways move
 [MIL-003]: ./milestones/mil-003-danish-and-malay-wiki.md
 [MIL-004]: ./milestones/mil-004-read-api.md
 [MIL-005]: ./milestones/mil-005-write-api.md
-[37f38a7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/37f38a77d878ac293fe09ee1f5e02a9a4afdce90
 [f5e83b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/f5e83b8347928ef17b977474da1f9cce9785bda3
+[9086ee4]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/9086ee41f673e467b694c5dc168cf6de17d1d50e
