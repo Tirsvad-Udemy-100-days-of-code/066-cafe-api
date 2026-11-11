@@ -1,13 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "cafe-api-day-66"
 version = "0.1.0"
-description = "Udemy 100 Days of Code, Day 66: documentation of a Flask REST cafe API lecture."
+description = "Udemy 100 Days of Code, Day 66: documentation and Flask implementation of a REST cafe API."
 readme = "README.md"
 requires-python = ">=3.13"
 license = { file = "LICENSE" }
-# No runtime dependencies: this repository documents the lecture and holds no application code.
-dependencies = []
+# Exactly two runtime dependencies (Business Case, success criterion 6).
+dependencies = [
+    "Flask>=3.1,<4",
+    "Flask-SQLAlchemy>=3.1,<4",
+]
+
+# Tools for development only; they are not runtime dependencies.
+[project.optional-dependencies]
+dev = ["pytest>=9", "ruff>=0.17", "mypy>=2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N"]
+
+[tool.mypy]
+strict = true
+mypy_path = "src"

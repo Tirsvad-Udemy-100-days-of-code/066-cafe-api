@@ -1,0 +1,29 @@
+"""Mapping of business errors to JSON error responses."""
+
+from http import HTTPStatus
+
+from flask import Flask, Response, jsonify
+
+from cafe_api.domain.errors.cafe_errors import CafeNotFoundError, InvalidSearchError
+from cafe_api.presentation.contracts.cafe_contract import error_body
+
+
+def _json_error(error: Exception, status: HTTPStatus) -> tuple[Response, int]:
+    return jsonify(error_body(str(error))), status.value
+
+
+def register_error_handlers(app: Flask) -> None:
+    """Register the JSON error handlers on the app.
+
+    CafeNotFoundError answers 404 and InvalidSearchError answers 400.
+
+    @param app The Flask app to extend.
+    """
+
+    @app.errorhandler(CafeNotFoundError)
+    def handle_not_found(error: CafeNotFoundError) -> tuple[Response, int]:
+        return _json_error(error, HTTPStatus.NOT_FOUND)
+
+    @app.errorhandler(InvalidSearchError)
+    def handle_invalid_search(error: InvalidSearchError) -> tuple[Response, int]:
+        return _json_error(error, HTTPStatus.BAD_REQUEST)
