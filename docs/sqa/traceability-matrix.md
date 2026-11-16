@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; created with the baseline milestone, with the review records of all documents (autonomous, not independent) | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; created with the baseline milestone, with the review records of all documents (autonomous, not independent) | [2f325a3] |
 
 ---
 
@@ -97,3 +97,4 @@ No view, design or test-plan artifact exists (the scope excludes them), so the c
 [RC-030]: ./reviews/rc-030-project-plan-baseline.md
 [RC-031]: ./reviews/rc-031-milestone-006.md
 [RC-032]: ./reviews/rc-032-wiki-baseline.md
+[2f325a3]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/2f325a39b931a60920bb82434ad99e74cb1f7951

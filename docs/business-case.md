@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the remaining mentions of a repository description and topics (Business Opportunity, In Scope, Stakeholders)<br>Accepted on a Go review, RC-020; supervised, not independent | [f5e83b8] |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out the abbreviations on first use (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-024; supervised, not independent | [9086ee4] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 8, success criterion 10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the PO domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 8, success criterion 10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the PO domain to education; reviewed in autonomous mode, not independent | [2f325a3] |
 
 ---
 
@@ -157,3 +157,4 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 [9086ee4]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/9086ee41f673e467b694c5dc168cf6de17d1d50e
 [PP-001]: ./project-plan.md
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
+[2f325a3]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/2f325a39b931a60920bb82434ad99e74cb1f7951

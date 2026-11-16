@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the repository description and topics from the G1 deliverable and the Scope Coverage row<br>Accepted on a Go review, RC-021; supervised, not independent | [f5e83b8] |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out API on first use in the body (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-026; supervised, not independent | [9086ee4] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006 (G6) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #57, the prompt log, the open milestones, the new traceability matrix and the CI in the Planning Assumptions and Open Issues; replaced `not yet synced` in the milestone column of the five earlier gateways with the links to their milestones on the git host; set the domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006 (G6) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #57, the prompt log, the open milestones, the new traceability matrix and the CI in the Planning Assumptions and Open Issues; replaced `not yet synced` in the milestone column of the five earlier gateways with the links to their milestones on the git host; set the domain to education; reviewed in autonomous mode, not independent | [2f325a3] |
 
 ---
 
@@ -132,3 +132,4 @@ A No-Go at a gateway returns that gateway to S01 for rework; later gateways move
 [ms-447]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/milestone/447
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
 [ms-587]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/milestone/587
+[2f325a3]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/2f325a39b931a60920bb82434ad99e74cb1f7951
