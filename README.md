@@ -30,6 +30,8 @@ This repository documents what the lecture teaches and holds our own Flask imple
 | `tests/` | `pytest` tests: `unit`, `integration`, `e2e` |
 | `framework/` | The SQA and QC framework the project follows |
 
+`.editorconfig` holds the editor settings of the framework baseline. `.env.example` lists empty placeholders for the two environment variables of the program (`CAFE_API_KEY` and `CAFE_API_DATABASE_URL`, both optional) and for the git host tokens that the framework scripts read; the program reads the process environment only and loads no `.env` file.
+
 ## 🎓 Lecture steps
 
 The images are illustrations with example data, drawn for this repository from the lecture description; they are not captures of the course project. Each step has a wiki page that explains what we gained ([English][wiki-home], [Dansk][wiki-home-da], [Bahasa Malaysia][wiki-home-ms]).
@@ -188,7 +190,7 @@ The tests use their own temporary SQLite files and never read `.env`.
 
 ## 📄 License
 
-See [LICENSE](./LICENSE).
+GNU Affero General Public License v3.0 only (AGPL-3.0-only), see [LICENSE](./LICENSE).
 
 ## 🔗 Links
 
@@ -200,14 +202,12 @@ See [LICENSE](./LICENSE).
 
 | Document | What it tells you |
 | --- | --- |
-| [AGENTS.md][agents] | The rules AI agents follow in this repository |
 | [Business Case][BC-001] | Why the project exists, its scope and success criteria |
 | [Stakeholder Analysis][SA-001] | Who is involved; the stakeholder IDs used for owners and reviewers |
 | [Project Plan][PP-001] | The gateways and their schedule |
 | [Milestones][milestones] | One document per gateway: Go/No-Go criteria and tasks |
 | [Artifact registry][registry] | Where each artifact type lives, the next version, the PO language and domain |
-| [Framework README][framework-readme] | The framework this project uses |
-| [Framework changelog][framework-changelog] | What changed in each framework release |
+| [Traceability matrix][TM-001] | How the documents link to each other and to their reviews |
 
 ---
 
@@ -227,11 +227,9 @@ See [LICENSE](./LICENSE).
 [wiki-7]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/wiki/Step-7-Update-Price
 [wiki-8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/wiki/Step-8-Delete-Cafe
 [wiki-9]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/wiki/Step-9-API-Documentation
-[agents]: ./AGENTS.md
 [BC-001]: ./docs/business-case.md
 [SA-001]: ./docs/stakeholder-analysis.md
 [PP-001]: ./docs/project-plan.md
 [milestones]: ./docs/milestones/
 [registry]: ./docs/artifact-registry.md
-[framework-readme]: ./framework/README.md
-[framework-changelog]: ./framework/CHANGELOG.md
+[TM-001]: ./docs/sqa/traceability-matrix.md
