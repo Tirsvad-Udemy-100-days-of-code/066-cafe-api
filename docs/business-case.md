@@ -4,15 +4,16 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-006] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Removed the remaining mentions of a repository description and topics (Business Opportunity, In Scope, Stakeholders)<br>Accepted on a Go review, RC-020; supervised, not independent | [f5e83b8] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out the abbreviations on first use (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-024; supervised, not independent | [9086ee4] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Spelled out the abbreviations on first use (optional criterion 10 of QC-LANG-001)<br>Accepted on a Go review, RC-024; supervised, not independent | [9086ee4] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 8, success criterion 10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the PO domain to education; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -44,6 +45,7 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 5. Keep the runtime dependencies to the minimum the API needs (Flask and Flask-SQLAlchemy) and scan the repository with opengrep before each push.
 6. Implement the cafe API from the lecture: random cafe, all cafes, search by location, add a cafe, update a price, delete a cafe with an API key; written from the lecture description, with tests.
 7. Keep the implementation clean in structure (layers per `clean-architecture`), constants in `constants.py`, Doxygen comments, and `pytest` tests that pass.
+8. Bring the finished project to the common baseline of the framework: the adopted framework release, a README that lists only the documents of the repository, project URL and licence metadata, the editor settings of the baseline, an `.env.example` in the framework's form that also lists the environment variables of the program, and a traceability matrix that covers the documents ([MIL-006]).
 
 ## Scope
 
@@ -56,12 +58,14 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 - A local opengrep scan before each push; the AI prompt log under `docs/ai-prompts/`.
 - The Flask cafe API (gateways G4 and G5): a `Cafe` model on SQLite (a file-based database that uses the Structured Query Language, SQL) with example seed data, the endpoints `GET /random`, `GET /all`, `GET /search`, `POST /add`, `PATCH /update-price/<id>` and `DELETE /report-closed/<id>` (guarded by an API key read from the environment), `pytest` tests, and README instructions to run it.
 - API documentation of the endpoints in the README and the wiki (lecture step 9), in the three wiki languages.
+- The baseline milestone [MIL-006]: the framework release, the README without the private framework files in its appendix, project URL and licence metadata, `.editorconfig`, `.env.example`, a new traceability matrix, review records and a review of the wiki. It changes no behaviour of the program.
 
 ### Out of Scope
 
 - The course's starting archive, its `cafes.db` and its solution code: the API is written from the lecture description and seeded with example data.
 - Hosting the API in production, a front end, user accounts, and a Postman collection or published Postman documentation.
 - Secrets: `.env` holds personal tokens and is never read into the project, tested or committed. The API key is read from an environment variable at run time; tests set their own test value and no real key is stored in the repository.
+- Any change to `src/`, `tests/`, `docs/images/` or the wiki pages in the baseline milestone [MIL-006]. That milestone starts the program on no public address, retakes no screenshot and runs the tests only.
 
 ## Expected Benefits
 
@@ -91,6 +95,7 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 | 7 | Reviews | 100 percent of artifacts have an `RC-*` verdict | Files in `docs/sqa/reviews/` |
 | 8 | Endpoints implemented | 6 of 6, each with a passing `pytest` test | `pytest` output |
 | 9 | Code review | `Go` against `qc-programming-python` for each code gateway | `RC-*` files |
+| 10 | The baseline milestone is done (objective 8) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-006] pass | The script exit codes and the pull request status on the git host |
 
 Criterion 4 (repository metadata) was removed on 2026-11-11 at S01's request. The other numbers are not changed, because other documents cite them.
 
@@ -106,11 +111,12 @@ Criterion 4 (repository metadata) was removed on 2026-11-11 at S01's request. Th
 | The scope grows past the one-week constraint | G5 slips | Two small code gateways; S01 decides to drop or move G5 |
 | A token leaks into the repository | Account compromise | `.env` is in `.gitignore`, is never opened by project tooling, and an opengrep scan runs before each push |
 | Gitea wiki publishing is not enabled | Wiki not visible | Keep the wiki in `docs/wiki/`, enable the wiki in the repository settings, verify after merge |
+| The documents of the baseline milestone [MIL-006] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `src/` and `tests/` are not changed, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 
 - S01 is Product Owner, developer and reviewer; the AI acts as stand-in reviewer in autonomous mode.
-- The Product Owner (PO) language is English and the PO domain is information technology (IT).
+- The Product Owner (PO) language is English; the PO domain is education since [MIL-006] (it was information technology (IT) until then; the documents that [MIL-006] does not change keep the domain `it`, see the Open Issues of [PP-001]).
 - The Gitea repository exists and `.env` holds tokens for the personal use of S01.
 - Wiki pages are published by the `publish-wiki-pages.yml` workflow after merge.
 
@@ -121,6 +127,8 @@ Criterion 4 (repository metadata) was removed on 2026-11-11 at S01's request. Th
 - Python code follows the framework rules (`constants.py`, Doxygen comments, `pytest` tests, layers per `clean-architecture`); nothing is written under `src/` or `tests/` before its gateway is `Accepted` with a `Go` review.
 - One branch and one pull request per milestone.
 - Duration: 2026-11-10 to 2026-11-17 (one week).
+- The baseline milestone [MIL-006] starts 2026-11-16 and is finished within one week, by 2026-11-23, so the end date of the plan moves from 2026-11-17 to 2026-11-23. An AI stand-in for S01 reviews and accepts the changed documents.
+- The program has no secret in the repository: the API key is read from the environment variable `CAFE_API_KEY` at run time and `.env.example` holds empty placeholders only.
 
 ## Cost–Benefit Assessment
 
@@ -147,3 +155,5 @@ Proceed — the scope is small and fits the one-week constraint: the documentati
 [SA-001]: ./stakeholder-analysis.md
 [f5e83b8]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/f5e83b8347928ef17b977474da1f9cce9785bda3
 [9086ee4]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/commit/9086ee41f673e467b694c5dc168cf6de17d1d50e
+[PP-001]: ./project-plan.md
+[MIL-006]: ./milestones/mil-006-framework-baseline.md

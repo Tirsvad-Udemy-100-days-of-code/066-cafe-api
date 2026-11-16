@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,12 +8,19 @@ version = "0.1.0"
 description = "Udemy 100 Days of Code, Day 66: documentation and Flask implementation of a REST cafe API."
 readme = "README.md"
 requires-python = ">=3.13"
-license = { file = "LICENSE" }
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [{ name = "Jens Tirsvad Nielsen" }]
 # Exactly two runtime dependencies (Business Case, success criterion 6).
 dependencies = [
     "Flask==3.1.3",
     "Flask-SQLAlchemy==3.1.1",
 ]
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/066-cafe-api/issues"
 
 # Tools for development only; they are not runtime dependencies.
 [project.optional-dependencies]
